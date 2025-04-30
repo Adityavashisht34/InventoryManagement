@@ -1,4 +1,4 @@
-import { BrowserRouter as Router, Routes, Route, Navigate } from 'react-router-dom';
+import { BrowserRouter , Routes, Route, Navigate } from 'react-router-dom';
 import { useAuth } from './context/AuthContext';
 import Navbar from './components/Navbar';
 import Dashboard from './pages/Dashboard';
@@ -21,7 +21,7 @@ function App() {
   const { user } = useAuth();
 
   return (
-    <Router>
+    <BrowserRouter>
       <div className="min-h-screen bg-gray-100">
         {user && <Navbar />}
         <Routes>
@@ -61,7 +61,7 @@ function App() {
           />
         </Routes>
       </div>
-    </Router>
+    </BrowserRouter>
   );
 }
 
