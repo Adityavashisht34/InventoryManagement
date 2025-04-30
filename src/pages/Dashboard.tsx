@@ -85,7 +85,7 @@ export default function Dashboard() {
               <YAxis />
               <Tooltip />
               <Legend />
-              <Bar dataKey="Quantity" fill="#8884d8" />
+              <Bar dataKey="quantity" fill="#8884d8" />
             </BarChart>
           </ResponsiveContainer>
         </div>
