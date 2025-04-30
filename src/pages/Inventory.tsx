@@ -12,7 +12,7 @@ interface Item {
 
 export default function Inventory() {
   const [items, setItems] = useState<Item[]>([]);
-  const [newItem, setNewItem] = useState({ name: '', quantity: 0, price: 0 });
+  const [newItem, setNewItem] = useState({ name: '', quantity: '', price: '' });
   const [loading, setLoading] = useState(true);
   const [restockQuantities, setRestockQuantities] = useState<{ [key: string]: number }>({});
 
@@ -35,7 +35,7 @@ export default function Inventory() {
     e.preventDefault();
     try {
       await api.addItem(newItem);
-      setNewItem({ name: '', quantity: 0, price: 0 });
+      setNewItem({ name: '', quantity: '', price: '' });
       fetchItems();
     } catch (error) {
       console.error('Error adding item:', error);
