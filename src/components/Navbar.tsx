@@ -29,10 +29,11 @@ export default function Navbar() {
           <div className="flex items-center">
             <Link to="/" className="flex items-center" onClick={closeMenu}>
               <Package className="h-8 w-8 text-indigo-600" />
-              <span className="ml-2 text-xl font-bold text-gray-800 truncate">
+              <span className="ml-2 mr-5 text-xl font-bold text-gray-800 truncate">
                 {user?.warehouseName || 'WareHub'}
               </span>
             </Link>
+            <span className='text-m'>*Data Retrieval may take few second*</span> 
           </div>
 
           {/* Desktop navigation */}
